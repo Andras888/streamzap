@@ -3,7 +3,7 @@ Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/i
 
 The repo contains the file that works with ir-keytable and any modern Linux kernel, that will allow you to use your Streamzap USB remote with MythTV.
 
-#Setting up:
+###Setting up:
 * Install the ir-keytable package (your distro provides this in all likelyhood), but may not be a new enough version.  You will need ir-keytable 0.8.8 or higher.  To find out what version (if any) you currently have, from your terminal execute:
 ```
 ir-keytable --version
