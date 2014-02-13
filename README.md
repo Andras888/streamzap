@@ -8,7 +8,7 @@ The repo contains the file that works with ir-keytable and any modern Linux kern
 ```
 ir-keytable --version
 ```
-	If the above will not show you have the correct package already installed, you can find it at https://launchpad.net/ubuntu/+source/v4l-utils/ You can get the source file to compile it yourself, but I recommend one of the built files that you can install by executing:
+If the above will not show you have the correct package already installed, you can find it at https://launchpad.net/ubuntu/+source/v4l-utils/ You can get the source file to compile it yourself, but I recommend one of the built files that you can install by executing:
 ```
 sudo dpkg -i <FILE>
 ```
