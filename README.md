@@ -34,7 +34,7 @@ sudo ir-keytable -c -w /etc/rc_keymaps/streamzap.local
 The syntax of the keymap `scancode button_name`
 
 #### Show Available Scancodes
-Execute `ir-keytable` without any arguments.  Example:
+Execute `sudo ir-keytable` without any arguments.  Example:
 ```
 # ir-keytable
 Found /sys/class/rc/rc0/ (/dev/input/event3) with:
@@ -46,7 +46,7 @@ Found /sys/class/rc/rc0/ (/dev/input/event3) with:
 	Repeat delay = 500 ms, repeat period = 125 ms
 ```
 
-Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
+Execute `sudo ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
 
 #### Show Availble Button Names
 See Button_Names file in the repo.
