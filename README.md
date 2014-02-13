@@ -1,5 +1,5 @@
 ###Foreword and sources
-I wish to whole-heartedly thank [greysky] (https://github.com/graysky2/streamzap), whose work my code is based upon, and who figured out how to make this work.  Also Richard Atterer, whose [webpage] (http://atterer.org/mythtv-xmbc-remote-control-without-lirc) served enlighting to me.
+I wish to whole-heartedly thank [greysky] (https://github.com/graysky2/streamzap), whose work my code is based upon, and who figured out how to make the remote work with ir-keytable.  Also Richard Atterer, whose [webpage] (http://atterer.org/mythtv-xmbc-remote-control-without-lirc) served enlighting to me.
 
 ##Streamzap a.k.a Tempest and MythTV
 This remote with its USB receiver is available from Amazon, eBay, and other sources.  Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more, although LIRC does provide the ability to map the same keypress to different actions under a variety of applications.
