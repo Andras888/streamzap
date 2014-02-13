@@ -4,7 +4,7 @@
 
 # File: /etc/rc_keymaps/streamzap.local
 
-# Streamzap MythTV codes customized by Andras888
+# Streamzap MythTV codes customized by greysky and Andras888
 
 0x28c0 KEY_0
 0x28c1 KEY_1
