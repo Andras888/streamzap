@@ -46,5 +46,5 @@ Found /sys/class/rc/rc0/ (/dev/input/event3) with:
 Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
 
 #### Show Availble Button Names
-The lrc-utils package is likely required.  Execute `irrecord -l` to see a list of all available button names.
+See Button_Names file in the repo.
 
