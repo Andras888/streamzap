@@ -1,47 +1,8 @@
 ##Streamzap
-Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more although LIRC does provide the ability to map the same keypress to different actions under a variety of applications.
+Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more, although LIRC does provide the ability to map the same keypress to different actions under a variety of applications.
 
 The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel as well as files to allow operation with LIRC, specifically for mythtv, xbmc, and mplayer.
 
-## Option #1 - Full featured operation of mplayer, mythtv, and xbmc using LIRC.
-### Setup LIRC
-* Install lirc and/or lirc-utils for your distro.  For Arch, only lirc-utils is required.
-* Place lircd.conf.streamzap-new in /etc/lirc renaming it to lircd.conf 
-* Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
-* Restart X if your just did the aforementioned step for the first time.
-* Start lirc using your init system (systemd, openrc, upstart, etc.)
-
-If the included lircd.conf does not work for you, consider generating your own with irrecord.
-```
-irrecord --device=/dev/lirc0 streamzap
-```
-Follow the included instructions.  It is doubtful that the actual scancodes have changed, so you can likely just copy that section into the new file.
-
-### For mythtv and mplayer
-* Place the .lirc dir from this repo into your homedir.
-* Place .lircrc into your homedir.
-* For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
-
-### For XBMC
-* Place Lirc.xml into ~/.xbmc/userdata
-* Place remote.xml into ~/.xbmc/userdata/keymaps
-
-#### XBMC Files and Formats
-* Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
-* remote.xml - Maps xbmc_buttons to xbmc_actions.  (`<xbmc_button>action</xbmc_button>`)
-
-The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
-
-###Supplemental Info
-#### Mplayer Links
-* [Upstream control file](/etc/mplayer/input.conf)
-* `mplayer -input keylist`
-* `mplayer -input cmdlist`
-
-#### XBMC Upstream Links
-* [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
-* [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xml)
-* [List of built-in function](http://wiki.xbmc.org/index.php?title=List_of_built-in_functions)
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).
