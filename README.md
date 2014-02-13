@@ -3,28 +3,25 @@ Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/i
 
 The repo contains the file that works with ir-keytable and any modern Linux kernel, that will allow you to use your Streamzap USB remote with MythTV.
 
-Setting up:
-* Install the ir-keytable package (your distro provides this in all likelyhood), but may not be a new enough version.  You will need ir-keytable 0.8.8 or higher.  To find out what version (if any) you currently have, from you terminal execute:
+#Setting up:
+* Install the ir-keytable package (your distro provides this in all likelyhood), but may not be a new enough version.  You will need ir-keytable 0.8.8 or higher.  To find out what version (if any) you currently have, from your terminal execute:
 ```
 ir-keytable --version
 ```
 
 * Modify /etc/rc_maps.cfg so the streamzap line points to /etc/rc_keymaps/streamzap.local
 ```
---- a/etc/rc_maps.cfg	2013-10-08 18:10:04.478595923 -0400
-+++ b/etc/rc_maps.cfg	2013-10-08 16:19:34.150994862 -0400
-@@ -77,7 +78,7 @@
- *	rc-npgtech               npgtech
- *	rc-leadtek-y04g0051      leadtek_y04g0051
- *	rc-manli                 manli
 -*	rc-streamzap             streamzap
 +*	rc-streamzap             /etc/rc_keymaps/streamzap.local
- *	rc-winfast-usbii-deluxe  winfast_usbii_deluxe
- *	rc-behold                behold
- *	rc-gadmei-rm008z         gadmei_rm008z
 ```
 
-* streamzap.local should be installed to /etc/rc_keymaps
+* Place streamzap.local to /etc/rc_keymaps.
+
+* If you reboot, your remote should work at this point.  Alternately to rebooting, you can load the streamzap.local by executing the following command:
+```
+sudo ir-keytable -c -w /etc/rc_keymaps/streamzap.local
+```
+
 
 ### Supplemental Info
 #### Syntax of /etc/rc_keymaps/streamzap.local
