@@ -1,12 +1,10 @@
-#
-# /etc/rc_keymaps/streamzap.local
-#
-#
 # table streamzap, type: RC-5-SZ
-# customized for mplayer and xbmc by graysky
-#
-# note that the commented lines with scancodes are the original ones
-# offered by the v4l-utils package at the time I wrote this
+
+# Protocol RC-5-SZ will only work with ir-keytable 0.8.8 or higher, but will work fine with kernel of Ubuntu or Mythbuntu 12.04.4 from boot time.
+
+# File: /etc/rc_keymaps/streamzap.local
+
+# Streamzap MythTV codes customized by Andras888
 
 0x28c0 KEY_0
 0x28c1 KEY_1
@@ -23,64 +21,83 @@
 0x28ca KEY_ESC
 
 #0x28cb KEY_MUTE
-0x28cb KEY_M
+0x28cb KEY_F9
 
-0x28cc KEY_CHANNELUP
+#0x28cc KEY_CHANNELUP
+0x28cc KEY_UP
 
 #0x28cd KEY_VOLUMEUP
-0x28cd KEY_0
+0x28cd KEY_F11
 
-0x28ce KEY_CHANNELDOWN
+#0x28ce KEY_CHANNELDOWN
+0x28ce KEY_DOWN
 
 #0x28cf KEY_VOLUMEDOWN
-0x28cf KEY_9
+0x28cf KEY_F10
 
 0x28d0 KEY_UP
+
 0x28d1 KEY_LEFT
 
 #0x28d2 KEY_ENTER
 0x28d2 KEY_SPACE
 
 0x28d3 KEY_RIGHT
+
 0x28d4 KEY_DOWN
 
 #0x28d5 KEY_MENU
-0x28d5 KEY_O
+0x28d5 KEY_M
 
 #0x28d6 KEY_EXIT
 0x28d6 KEY_ESC
 
 #0x28d7 KEY_PLAY
-0x28d7 KEY_SPACE
+0x28d7 KEY_P
 
 #0x28d8 KEY_PAUSE
-0x28d8 KEY_SPACE
+0x28d8 KEY_P
 
 #0x28d9 KEY_STOP
-0x28d9 KEY_X
+0x28d9 KEY_ESC
 
 # |<<
 #0x28da KEY_BACK
-0x28da KEY_PAGEDOWN
+0x28da KEY_PAGEUP
 
 # >>|
 #0x28db KEY_FORWARD
-0x28db KEY_PAGEUP
+0x28db KEY_PAGEDOWN
 
-0x28dc KEY_RECORD
+#0x28dc KEY_RECORD
+0x28dc KEY_R
+
+# <<
+#0x28dd KEY_REWIND
+0x28dd KEY_LEFT
 
 # >>
 #0x28de KEY_FASTFORWARD
-0x28de KEY_UP
-# <<
-#0x28dd KEY_REWIND
-0x28dd KEY_DOWN
+0x28de KEY_RIGHT
 
-#0x28e0 KEY_RED
-0x28e0 KEY_V
+#0x28e0 KEY_RED (LIVE)
+0x28e0 KEY_V # (Toggle Picture-in-picture on or off)
 
-#0x28e1 KEY_GREEN
-0x28e1 KEY_T
+#0x28e1 KEY_GREEN (PLAY)
+0x28e1 KEY_W # (Cycle through 4:3 aspect ratio)
 
-0x28e2 KEY_YELLOW
-0x28e3 KEY_BLUE
+#0x28e2 KEY_YELLOW (PRGM)
+0x28e2 KEY_Q # (Skip back to previous commercial break marker)
+
+#0x28e3 KEY_BLUE (SET)
+0x28e3 KEY_Z # (Skip to next commercial break marker)
+
+#0x28e4 KEY DISP
+0x28e4 KEY_I # (Information)
+
+#0x28e5 KEY PTZ
+0x28e5 KEY_S # (Program Guide)
+
+#0x28e6 KEY HELP
+0x28e6 KEY_T # (Close Caption Subtitles)
+
