@@ -1,11 +1,14 @@
-##Streamzap
+##Streamzap and MythTV
 Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more, although LIRC does provide the ability to map the same keypress to different actions under a variety of applications.
 
-The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel as well as files to allow operation with LIRC, specifically for mythtv, xbmc, and mplayer.
+The repo contains the file that works with ir-keytable and any modern Linux kernel, that will allow you to use your Streamzap USB remote with MythTV.
 
+Setting up:
+* Install the ir-keytable package (your distro provides this in all likelyhood), but may not be a new enough version.  You will need ir-keytable 0.8.8 or higher.  To find out what version (if any) you currently have, from you terminal execute:
+```
+ir-keytable --version
+```
 
-## Option #2 - Basic operation of mplayer using only the v4l-utils package.
-* Install the v4l-util package (your distro provides this in all likelyhood).
 * Modify /etc/rc_maps.cfg so the streamzap line points to /etc/rc_keymaps/streamzap.local
 ```
 --- a/etc/rc_maps.cfg	2013-10-08 18:10:04.478595923 -0400
