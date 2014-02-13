@@ -92,12 +92,12 @@
 #0x28e3 KEY_BLUE (SET)
 0x28e3 KEY_Z # (Skip to next commercial break marker)
 
-#0x28e4 KEY DISP
+#0x28e4 KEY_DISP
 0x28e4 KEY_I # (Information)
 
-#0x28e5 KEY PTZ
+#0x28e5 KEY_PTZ
 0x28e5 KEY_S # (Program Guide)
 
-#0x28e6 KEY HELP
+#0x28e6 KEY_HELP
 0x28e6 KEY_T # (Close Caption Subtitles)
 
