@@ -8,7 +8,10 @@ The repo contains the file that works with ir-keytable and any modern Linux kern
 ```
 ir-keytable --version
 ```
-
+You can find the package at https://launchpad.net/ubuntu/+source/v4l-utils/0.8.8-2ubuntu1 where you can get the source file to compile it yourself, but I recommend one of the built files that you can install by executing:
+```
+sudo dpkg -i <FILE>
+```
 * Modify /etc/rc_maps.cfg so the streamzap line points to /etc/rc_keymaps/streamzap.local
 ```
 -*	rc-streamzap             streamzap
