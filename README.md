@@ -21,7 +21,7 @@ sudo dpkg -i <FILE>
 +*	rc-streamzap             /etc/rc_keymaps/streamzap.local
 ```
 
-* Place streamzap.local to /etc/rc_keymaps.
+* Place streamzap.local into /etc/rc_keymaps/.
 
 * If you reboot, your remote should work at this point.  Alternately to rebooting, you can load the streamzap.local by executing the following command:
 ```
